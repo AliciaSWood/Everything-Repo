@@ -1,0 +1,37 @@
+.CounterDiv {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: silver;
+}
+
+.buttonHolder {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.button {
+    margin: 50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(179, 176, 176);
+    }
+
+}
+
+.counter {
+    width: 150px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}

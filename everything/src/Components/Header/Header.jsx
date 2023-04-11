@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import styles from './header.module.scss'
+import { Link } from 'react-router-dom';
 
 
 const Header = ({setSearch, search}) => {
@@ -18,15 +19,25 @@ const [submit, setSubmit] = useState("")
 
     
     return (
-        <div>
+        <div className = {styles.HeaderDiv}>
             <div>
             <h1>Main Page</h1>
+
             </div>
+            <nav className={styles.Navbar}>
+            <ul>
+            <li>
+              <Link to="/morepage">...More</Link>{" "}
+            </li>
+            </ul>
+            </nav>
             <form onSubmit = {onSubmitHandler}>
             <div>
                 <input type = "text" placeholder="Look up something..." onChange = {handleChange} ></input>
             </div>
-            {submit && <p>Search results for: {submit}</p>}
+            <div className = {styles.searchResults}>
+            {submit && <p><b>Search results for: </b>{submit}</p>}
+            </div>
             </form>
         </div>
     );
